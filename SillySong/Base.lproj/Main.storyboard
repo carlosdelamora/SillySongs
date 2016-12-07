@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tu2-jk-YDk">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="xs1-kk-q1t">
+            <objects>
+                <viewController id="Tu2-jk-YDk" customClass="MainViewController" customModule="SillySong" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xy6-UE-D2w"/>
+                        <viewControllerLayoutGuide type="bottom" id="9p9-gU-3BM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0gf-Qr-TZc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generate a Silly Song!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxr-bf-PEX">
+                                <rect key="frame" x="60" y="40" width="200" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gnG-UM-9tk"/>
+                                    <constraint firstAttribute="height" constant="105" id="udo-sg-arx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sOi-jJ-jti">
+                                <rect key="frame" x="60" y="173" width="200" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="displayLyrics:" destination="Tu2-jk-YDk" eventType="editingDidEnd" id="GYv-65-3pB"/>
+                                    <action selector="reset:" destination="Tu2-jk-YDk" eventType="editingDidBegin" id="AVA-HQ-Zec"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWI-uR-NfR">
+                                <rect key="frame" x="60" y="246" width="200" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="9sD-X3-VRZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41949899381354727" green="0.77401804804760277" blue="0.92336215101522845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sOi-jJ-jti" firstAttribute="trailing" secondItem="uWI-uR-NfR" secondAttribute="trailing" id="8y3-E5-965"/>
+                            <constraint firstItem="sOi-jJ-jti" firstAttribute="top" secondItem="Vxr-bf-PEX" secondAttribute="bottom" constant="28" id="KTs-e4-oYf"/>
+                            <constraint firstItem="Vxr-bf-PEX" firstAttribute="leading" secondItem="sOi-jJ-jti" secondAttribute="leading" id="QWZ-ai-h3R"/>
+                            <constraint firstItem="uWI-uR-NfR" firstAttribute="top" secondItem="sOi-jJ-jti" secondAttribute="bottom" constant="43" id="cca-oU-S4p"/>
+                            <constraint firstItem="Vxr-bf-PEX" firstAttribute="trailing" secondItem="sOi-jJ-jti" secondAttribute="trailing" id="fhr-p9-Kcf"/>
+                            <constraint firstItem="Vxr-bf-PEX" firstAttribute="centerX" secondItem="0gf-Qr-TZc" secondAttribute="centerX" id="fnw-hi-You"/>
+                            <constraint firstItem="Vxr-bf-PEX" firstAttribute="top" secondItem="Xy6-UE-D2w" secondAttribute="bottom" constant="20" id="gmX-pG-1Tu"/>
+                            <constraint firstItem="sOi-jJ-jti" firstAttribute="leading" secondItem="uWI-uR-NfR" secondAttribute="leading" id="pW4-wK-APp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lyricsTextView" destination="uWI-uR-NfR" id="Zyw-PE-YMB"/>
+                        <outlet property="nameTextField" destination="sOi-jJ-jti" id="vjZ-S0-8Vg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqn-st-yVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="14"/>
+        </scene>
+    </scenes>
+</document>
